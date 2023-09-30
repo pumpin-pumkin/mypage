@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  <style>
+    /* Custom styles */
+    /* Add your own custom CSS styles here */
+	
+	* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul.menu {
+    display: inline-block;
+    list-style-type: none;
+	font-size: 0.5em;
+	
+}
+li.menu_list {
+    height: 40px;
+    width: 70px;
+    position: relative;
+}
+li.menu_list .front,
+a.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+li.menu_list .front {
+    background-color: #34465d;
+    color: #FFFC00;
+    transform-origin: 0 0;
+	
+	z-index:10;
+}
+
+
+li.menu_list:hover , a.side:hover{
+  box-shadow: -8px 0px 5px lightblue;;
+} 
+
+li.b .front{background-color: #bce8c8;
+    color: #f0f0f0;}
+	
+li.c .front{background-color: #aaf2db;
+    color: #f0f0f0;}
+	
+li.d .front{background-color: #aad5f2;
+    color: #f0f0f0;}
+	
+	
+li.e .front{background-color: #aab7f2;
+    color: #f0f0f0;}
+	
+li.f .front{background-color: #b8aaf2;
+    color: #f0f0f0;}
+
+li.g .front{background-color: #d6aaf2;
+    color: #f0f0f0;}
+	
+li.h .front{background-color: #f2aae1;
+    color: #f0f0f0;}
+
+
+
+a.side {
+    background-color: #FFFC00;
+    color: #5a0e0e;;
+    transform-origin: 0 0 85px;
+    transform: rotateY(-90deg);
+}
+li.menu_list:hover a.side {
+    transform: rotateY(0deg);
+}
+li.menu_list:hover .front {
+    transform: rotateY(90deg);
+}
+	
+	
+
+    header {
+      background-image: url("bg-01.jpg");
+      background-size: cover;
+      background-position: center;
+	  width:100%;
+	  font-family: Arial, sans-serif;
+	  
+      /*height: 50%;*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      color: #fff;
+	  
+	  	  
+    }
+	
+	
+	footer{
+	padding-top:5vw;
+	width: 100%;
+    background-image: url("bg2.png");
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+
+	
+	
+}
+
+	body{
+	font-family: Arial, sans-serif;
+	}
+	
+	section{
+	margin:3% 15% 5% 15%;}
+	
+	
+	
+	
+	
+	.bg1 {
+		 margin: 0;
+  padding: 0;
+  
+	 background-image: url("bg1.png");
+
+   /* Full height */
+ width: 100%;
+ 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  
+  .bg2 {
+  margin:0;
+  padding: 0;
+	 background-image: url("bg2.png");
+   width: 100%;
+      
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+	
+	
+	
+	
+
+	.basic_info{
+	/*display: flex;*/
+	position: absolute;
+
+	color: #5a0e0e;
+	font-family: Arial, sans-serif;
+	padding:40px 0px 0px 0px;
+	
+	
+	}
+	
+	.basic_info a:link , .col1 a:link , .col2 a:link, .col3 a:link{
+  color: #5a0e0e;
+}
+
+/* visited link */
+.basic_info a:visited , .col1 a:visited , .col2 a:visited, .col3 a:visited {
+  color: orange;
+}
+
+/* mouse over link */
+.basic_info a:hover , .col1 a:hover , .col2 a:hover, .col3 a:hover {
+  color: #cde3ff;
+}
+
+/* selected link */
+.basic_info a:active , .col1 a:active , .col2 a:active, .col3 a:active {
+  color: blue;
+}
+	
+	/*.basic_info a {color: #5a0e0e;}*/
+	
+	
+	
+	.basic_info i{font-size:1.5em;}
+	
+	
+	
+	
+	
+	@media screen and (max-width: 900px) {
+	
+  .basic_info{
+   padding:40px 40px 0px 0px;
+  float:left;
+  margin-left:20px;
+ 
+  width:40%;
+  font-size:12px;
+  line-height:0px;
+      
+  }
+  
+  .basic_info h2{font-size:1.8em;line-height:10px;}
+  
+  
+
+  
+  .profile-picture img {
+	padding: 0px;
+  float: right;
+  width: 30%;
+	  
+	  
+    }
+	
+	
+  }
+  
+  
+  
+  
+	
+    .profile-picture img {
+	
+      width: 20%; /* Adjust the size as needed */
+      border-radius: 5%;
+     
+	  margin-left:65%;
+	  
+    }
+	
+	
+	
+	table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  padding-left:20px;
+}
+
+tr:nth-child(even) {
+  background-color: #cde3ff;
+}
+
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.responsive_video {
+
+padding: 0 6px;
+  float: left;
+  width: 48%;}
+  
+ 
+
+@media only screen and (max-width:1200px) {
+  .responsive_video {
+    width: 100%;
+  }
+}
+
+.col1, .col2, .col3{
+
+  float: right;
+  width: 5%;
+  margin:8px;
+  
+}
+
+.footnote{float: left;margin-left: 15%;}
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+  
+}
+
+
+
+.my-float{
+	margin-top:16px;
+}
+
+.col1 i, .col2 i,.col3 i{font-size:2em;}
+
+@media screen and (max-width: 900px) {
+.col1, .col2, .col3{
+
+  float: right;
+  width: 5%;
+  margin:8px;
+  
+}
+
+.col1 i, .col2 i,.col3 i{font-size:1.5em;}
+}
+
+
+
+.menuside{position:fixed;
+	
+	bottom:40px;
+	left:40px;}
+@media only screen and (max-width:950px) {
+  .menuside{display:none;}
+}	
+
+  </style>
+</head>
+
+
+<body>
+<div class="menuside">
+<ul class="menu">
+    <li class="menu_list b">
+        <span class="front fa fa-arrow-up"></span>
+        <a href="#top" class="side">Top</a>
+    </li>
+    <li class="menu_list c">
+        <span class="front fa fa-question"></span>
+        <a href="#a" class="side">About</a>
+    </li>
+    <li class="menu_list d">
+        <span class="front fa fa-graduation-cap"></span>
+        <a href="#b" class="side">Education</a>
+    </li>
+    <li class="menu_list e">
+        <span class="front fa fa-users"></span>
+        <a href="#c" class="side">Experience</a>
+    </li>
+	<li class="menu_list f">
+        <span class="front fa fa-cubes"></span>
+        <a href="#d" class="side">Activity</a>
+
+    </li>
+	<li class="menu_list g">
+        <span class="front fa fa-magic"></span>
+        <a href="#e" class="side">Skills</a>
+
+    </li>
+	<li class="menu_list h">
+        <span class="front fa fa-paint-brush"></span>
+        <a href="#f" class="side">Artwork</a>
+
+    </li>
+</ul>
+
+</div>
+
+
+  <header id="top">
+    <nav class="navbar">
+
+    </nav>
+	
+	
+	<div class="basic_info" >
+      <h2>Rio Lin</h2> 
+	  <br>
+	 <p><i class="fa fa-whatsapp"></i><a href="https://wa.me/85298078862">9807 8862</a></p>
+	 <p><i class="fa fa-envelope-o" ></i><a href="mailto:riolinabc@gmail.com">riolinabc@gmail.com</a></p>
+	 <p><i class="fa fa-instagram" ></i><a href="https://instagram.com/rio_hahaha_?igshid=MzMyNGUyNmU2YQ==">rio_hahaha_</a></p>
+
+	  
+	  
+	  </div>
+	  
+    <div class="profile-picture">
+      
+	  
+	  <img src="RioLin.jpg" alt="Profile Picture">
+    </div>
+  </header>
+
+
+  <main role="main" class="container">
+  
+  <div class="bg1">
+  <br>
+  <br>
+    <section id="a">
+      <h1>About Me</h1>
+      <p>I am a introverted but talkative girl. I love exploring new things, especially technological or art area and have fun. Currently apart from studying and working, I like drawing,mostly digital drawing but sometimes watercolor. From time to time,  I make physical cards or instagram art or short animation or make art from coding. Besides, I  like to browse snippets of coding from YouTube, instagram and telegram. Some are computer vision area, some are website developing related, or some are just related to game.</p>
+    </section>
+<br>
+
+
+</div>
+
+
+<div>
+
+    <section id="b">
+      <h2>Education</h2>
+	  <table>
+	  <tr><th>Date</th>
+	  <th>Degree</th>
+	  <th>School</th>
+	  <tr><td>2022---Present</td>
+	  <td>Master of Science in Information Technology</td>
+	  <td>The Hong Kong Polytechnic University</td></tr>
+	  
+	  <tr><td>2017---2021</td>
+	  <td>Bachelor of Science(BSC)in Creative Media</td>
+	  <td>City University of Hong Kong</td></tr>
+	  </table>
+    </section>
+
+
+
+
+	
+
+</div>
+
+<div>
+
+	<section id="c">
+      <h2>Experience</h2>
+      <table>
+  <tr>
+    <th>Date</th>
+    <th>Details</th>
+    <th>Company</th>
+  </tr>
+  <tr>
+    <td>9/2023---Present</td>
+    <td>Game Technician
+<ul>
+<li>Test electronic and mechanical
+<li>Ensure the games are running
+smoothly
+<li>Help operate the game
+</ul></td>
+    <td>GF Lab International Ltd</td>
+  </tr>
+  <tr>
+    <td>7/2021--- Present</td>
+    <td>Research Assistant
+
+<ul>
+<li>Collected data for research
+project
+<li>Performed data entry
+</ul></td>
+    <td>City University of Hong
+Kong</td>
+  </tr>
+  <tr>
+    <td>4/2023</td>
+    <td>Game Developer
+	<ul>
+	<li>Hardware research and
+development(web socket
+function, gateway data transmit,
+simple game logic demo)</li></ul></td>
+    <td>Act Plus Education
+Foundation Limited</td>
+  </tr>
+  <tr>
+    <td>7/2021--- 5/2022</td>
+    <td>UI/UX Designer
+<ul><li>
+Designed UI/UX for websites
+and mobile apps of customers
+/own products of the company.</li>
+<li>Built up and edited websites.</li>
+<li>Produced graphics and
+animation.</li></ul></td>
+    <td>iGears Technology Limited</td>
+  </tr>
+  
+</table>
+    </section>
+	
+	
+
+
+
+</div>
+
+<div>
+
+
+
+
+    <section id="d">
+      <h2>Extra-curricular Activity</h2>
+	  <table>
+  <tr>
+    <th>Date</th>
+    <th>Details</th>
+    <th>Organization</th>
+  </tr>
+  <tr>
+    <td>August 2023</td>
+    <td>Participant
+<ul>
+<li> 沙漠探險家主題第三屆電繪創作比賽(Digital Painting: Open
+section — Bronze Award)
+</ul></td>
+    <td>Hong Kong Cultural &
+Creative Industrial</td>
+  </tr>
+  <tr>
+    <td>August 2023</td>
+    <td>AWS Certified Cloud Practitioner(CLF)
+
+<ul>
+<li>Pass
+</ul></td>
+    <td>AWS training and
+certification</td>
+  </tr>
+  <tr>
+    <td>July 2023</td>
+    <td>Participant
+	<ul>
+	<li>Asia Arts Elite Festival
+Painting Competition 2023 (Digital Painting: Open section — Gold Award)</li></ul></td>
+    <td>Asia Creative Integrated Arts Association</td>
+  </tr>
+  <tr>
+    <td>4/2022 --- 9/2022</td>
+    <td>Participant
+		<ul><li>
+		Experienced game production
+		using Unreal Engine</li>
+		<li>Learned basic skills in
+		modeling using Maya and
+		Substance Painter</li>
+		<li>Learned basic skills in
+		animation production using
+		Maya</li>
+		<li>Experienced motion capture
+		and import it to Maya</li>
+		</ul></td>
+    <td>Advanced Game Production
+Course (Act Plus Education
+Foundation Limited)</td>
+  </tr>
+  
+  <tr>
+    <td>August 2020</td>
+    <td>Participant
+<ul><li>
+Learned skills in viewing
+design work.</li>
+<li>Experienced design-related
+process, including logo
+design, poster design,
+derivative design.</li>
+<li>Exchanged ideas with
+Shanghai students.</li>
+
+</ul></td>
+    <td>SHUA 2019-20 - 滬港大學聯
+盟 - 上海大學美術學院品牌
+研習營</td>
+  </tr>
+  
+</table>
+
+</section>
+
+
+
+</div>
+
+<div>
+
+
+<section id="e">
+<h2>Computer skills</h2>
+      <ul>
+        <li>Proficient in Adobe XD, Adobe Illustrator, Adobe Photoshop, Adobe Premiere </li>
+        <li>Familiar with Adobe After Effects, Unity, Unreal, Maya</li>
+       </ul>
+	  
+	 </section>
+	 
+	
+<section id="f">
+<h2>Featured Artwork</h2>
+<br>
+<h3> Digital Painting</h3>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bamboo_girl.png">
+      <img src="bamboo_girl.png" alt="Panda girl" width="400" height="400">
+    </a>
+    <div class="desc">Panda girl</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pic_2.png">
+      <img src="pic_2.png" alt="Touch. Star. Hope." width="400" height="400">
+    </a>
+    <div class="desc">Touch. Star. Hope.</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="teddy.png">
+      <img src="teddy.png" alt="crying teddy" width="400" height="400">
+    </a>
+    <div class="desc">Crying teddy</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="fire.png">
+      <img src="fire.png" alt="Fire under starry night." width="400" height="400">
+    </a>
+    <div class="desc">Fire under starry night.</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+   
+</section>
+
+
+
+<section >
+<h2>Animation</h2>
+  <div class="responsive_video">
+    <iframe width="400" height="300" src="https://www.youtube.com/embed/IXwwYdBIHoE" title="Just Go" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<div>2D animation built using Photoshop.</div>
+    </div>
+
+
+
+  <div class="responsive_video">
+    <iframe width="400" height="300" src="https://www.youtube.com/embed/sTAa58oht30" title="0-1 walk cycle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div>Animation built using p5js.</div>
+  </div>
+
+
+
+<div class="clearfix"></div>
+    
+<section>
+ 
+
+
+<a href="https://wa.me/85298078862" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+
+ 
+  </main>
+
+  <footer>
+ <section>
+   <div class="col1"><p><a href="https://wa.me/85298078862"><i class="fa fa-whatsapp"></i></a></p></div>
+	 <div class="col2"><p><a href="mailto:riolinabc@gmail.com"><i class="fa fa-envelope-o" ></i></a></p></div>
+	 <div class="col3"><p><a href="https://instagram.com/rio_hahaha_?igshid=MzMyNGUyNmU2YQ=="><i class="fa fa-instagram" ></i></a></p></div> </section>                                   
+    <div class="footnote"><p>&copy; 2023 Rio Lin</p></div>
+	 
+	
+	<br>
+	
+	
+	 
+	 
+	</section>
+	
+	<div class="clearfix"></div>
+	
+
+
+  </footer>
+  
+  
+  </div>
+ 
+</body>
+</html>
